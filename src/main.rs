@@ -1,7 +1,5 @@
 use anyhow::Result;
-use cairo::{Context, Format, ImageSurface};
 use log::warn;
-use pango::FontDescription;
 use shared_structures::SharedRingBuffer;
 use std::env;
 use std::sync::Arc;
@@ -17,8 +15,9 @@ use winit::{
 };
 
 use xbar_core::{
+    cairo::{self, Context, Format, ImageSurface},
     AppState, BarConfig, Color, ShapeStyle, ThemeMode, colors_for_theme, draw_bar,
-    initialize_logging, spawn_shared_eventfd_notifier,
+    initialize_logging, pango::FontDescription, spawn_shared_eventfd_notifier,
 };
 
 fn tuned_colors_for_theme(mode: ThemeMode) -> xbar_core::Colors {
