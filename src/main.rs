@@ -520,10 +520,18 @@ impl App {
             monitor_labels: ["🥇", "🥈", "🥉", "❔"],
             volume_label: "🔊",
             mute_label: "🔇",
+            brightness_label: "🔆",
+            battery_label: "🔋",
+            battery_charging_label: "⚡",
+            cpu_label: "🧠",
+            mem_label: "💾",
 
             show_audio: true,
             show_theme_toggle: true,
+            show_brightness: true,
+            show_battery: true,
             volume_step: 5,
+            brightness_step: 5,
         };
 
         // Font: configurable via env; default to a widely available monospace.
